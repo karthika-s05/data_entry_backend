@@ -66,6 +66,12 @@ app.get('*', (req, res, next) => {
   res.sendFile(path.join(frontendDist, 'index.html'));
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "Backend running successfully"
+  });
+});
+
 // Error Handling Middleware
 app.use(notFoundHandler);
 app.use(errorHandler);
