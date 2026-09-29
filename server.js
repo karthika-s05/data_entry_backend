@@ -37,10 +37,7 @@ if (clientUrl !== '*') {
 }
 
 // Middleware
-app.use(cors({
-  origin: allowedOrigins,
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 
 // Health Check
